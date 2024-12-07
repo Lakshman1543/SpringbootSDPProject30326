@@ -68,6 +68,14 @@
         position: relative;
       }
       
+      .error-message {
+    color: red;            /* Text color */
+    text-align: center;    /* Center alignment */
+    font-weight: bold;     /* Optional: Makes the text bold */
+    margin: 10px 0;        /* Adds some spacing */
+}
+      
+      
       .form-input {
         width: 100%;
         padding: 12px 15px;
@@ -197,9 +205,10 @@
     </div>
     <!-- Optional: Feedback message display -->
     <p id="message" class="error-message">
-      <!-- Server error messages can be dynamically rendered here -->
-      ${message}
-    </p>
+    <!-- Server error messages can be dynamically rendered here -->
+    ${message}
+</p>
+
               <div class="text-center mt-4">
                 <a href="#" id="switchToRegister">Don't have an account? Register here.</a>
               </div>

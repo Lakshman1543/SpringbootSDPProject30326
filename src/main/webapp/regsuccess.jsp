@@ -48,7 +48,7 @@
   <div class="container">
     <h1>Registered Successfully!</h1>
     <p>Click the button below to login</p>
-    <a href="userlogin" class="button">Login</a>
+    <a href="login" class="button">Login</a>
   </div>
 </body>
 </html>
