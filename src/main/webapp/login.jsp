@@ -165,8 +165,8 @@
           <div class="flex flex-1 justify-end gap-8">
             <div class="flex items-center gap-9">
               <a class="text-[#0e151b] text-sm font-medium leading-normal" href="/">Home</a>
-      <a class="text-[#0e151b] text-sm font-medium leading-normal" href="aboutus">About Us</a>
               <a class="text-[#0e151b] text-sm font-medium leading-normal" href="login">Login</a>
+               <a class="text-[#0e151b] text-sm font-medium leading-normal" href="aboutus">About Us</a>
               <a class="text-[#0e151b] text-sm font-medium leading-normal" href="contactus">Contact Us</a>
             </div>
             </div>
