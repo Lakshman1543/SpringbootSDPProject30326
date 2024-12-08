@@ -231,6 +231,22 @@ public class AdminController {
 		curator.setImage(blob);
 
 		String msg = adminService.addCurator(curator);
+		
+	    String deploymentLink = "https://skillcertify.up.railway.app";
+	    String emailBody = String.format(
+	        "Dear %s,\n\n" +
+	        "Welcome to SkillCertify! Below are your account details:\n\n" +
+	        "Username: %s\n" +
+	        "Password: %s\n\n" +
+	        "You can log in to your account using the following link:\n%s\n\n" +
+	        "Best regards,\nSkillCertify Team",
+	        curator.getName(),
+	        curator.getUsername(),
+	        curator.getPassword(),
+	        deploymentLink
+	    );
+
+	    emailService.sendEmail(curator.getEmail(), "Welcome to SkillCertify!", emailBody);
 
 		 emailService.sendCuratorDetails(curator.getEmail(), curator.getName(), curator.getUsername(), curator.getPassword());
 		
