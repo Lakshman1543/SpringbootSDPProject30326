@@ -127,10 +127,12 @@ public class EmailService {
         resetToken.setExpiresAt(expiresAt);
         resetTokenRepository.save(resetToken); // Assume `resetTokenRepo` is a JPA repository for `ResetToken`
 
-        String resetLink = "http://localhost:2026/resetpassword?token=" + token + "&role=" + role;
+        // Use the deployed URL instead of the local URL
+        String resetLink = "https://skillcertify.up.railway.app/resetpassword?token=" + token + "&role=" + role;
         sendEmail(email, "Reset Password", "Click this link to reset your password: " + resetLink);
         return resetLink;
     }
+
     
     @PostMapping("resetpassword")
     public ResponseEntity<String> resetPassword(@RequestParam String token, @RequestParam String role, @RequestParam String newPassword) {

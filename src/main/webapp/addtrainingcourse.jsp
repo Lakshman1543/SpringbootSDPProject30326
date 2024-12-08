@@ -4,7 +4,8 @@
 <%
 Curator curator = (Curator) session.getAttribute("curator");
 if (curator == null) {
- 
+	response.sendRedirect("login");
+	return;
 }
 %>
 <!DOCTYPE html>

@@ -1,10 +1,12 @@
+<%@page import="com.klef.jfsd.springboot.model.Admin"%>
 <%@page import="com.klef.jfsd.springboot.model.Curator"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <%
-Curator curator = (Curator) session.getAttribute("curator");
-if (curator == null) {
- 
+Admin admin = (Admin) session.getAttribute("admin");
+if (admin == null) {
+	response.sendRedirect("adminsessionexpiry");
+	return;
 }
 %>
 <!DOCTYPE html>
