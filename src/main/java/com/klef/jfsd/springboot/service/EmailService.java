@@ -125,9 +125,8 @@ public class EmailService {
         resetToken.setEmail(email);
         resetToken.setCreatedAt(createdAt);
         resetToken.setExpiresAt(expiresAt);
-        resetTokenRepository.save(resetToken); // Assume `resetTokenRepo` is a JPA repository for `ResetToken`
-
-        // Use the deployed URL instead of the local URL
+        resetTokenRepository.save(resetToken); 
+        
         String resetLink = "https://skillcertify.up.railway.app/resetpassword?token=" + token + "&role=" + role;
         sendEmail(email, "Reset Password", "Click this link to reset your password: " + resetLink);
         return resetLink;

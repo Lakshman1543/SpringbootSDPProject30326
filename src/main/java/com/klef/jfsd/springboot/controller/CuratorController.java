@@ -206,7 +206,7 @@ public class CuratorController {
         ModelAndView mv = new ModelAndView();
         try {
             String token = curatorService.generateResetToken(email); // Generate token for password reset
-            String resetLink = "http://localhost:2026/resetpassword?token=" + token;
+            String resetLink = "https://skillcertify.up.railway.app/resetpassword?token=" + token;
 
             // Send reset link via email
             emailService.sendResetLink(email, resetLink);
