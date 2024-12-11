@@ -300,7 +300,7 @@ input[type="radio"]:checked::before {
             <div class="input-group">
                 <label for="uname">Name</label>
                 <div class="input-with-icon">
-                    <input type="text" id="uname" name="name" required placeholder="Enter your name" />
+                    <input type="text" id="uname" name="name" placeholder="Enter your name"  required="required" />
                     <i class="fas fa-user"></i>
                 </div>
             </div>
@@ -309,15 +309,15 @@ input[type="radio"]:checked::before {
                 <label>Gender</label>
                 <div class="radio-group">
                     <label class="radio-label">
-                        <input type="radio" id="male" name="gender" value="MALE" required />
+                        <input type="radio" id="male" name="gender" value="MALE" required="required"  />
                         Male
                     </label>
                     <label class="radio-label">
-                        <input type="radio" id="female" name="gender" value="FEMALE" required />
+                        <input type="radio" id="female" name="gender" value="FEMALE" required="required"  />
                         Female
                     </label>
                     <label class="radio-label">
-                        <input type="radio" id="others" name="gender" value="OTHERS" required />
+                        <input type="radio" id="others" name="gender" value="OTHERS" required="required"  />
                         Others
                     </label>
                 </div>
@@ -326,7 +326,7 @@ input[type="radio"]:checked::before {
             <div class="input-group">
                 <label for="uemail">Email ID</label>
                 <div class="input-with-icon">
-                    <input type="email" id="uemail" name="email" required placeholder="Enter your email" />
+                    <input type="email" id="uemail" name="email"  placeholder="Enter your email"  required="required" />
                     <i class="fas fa-envelope"></i>
                 </div>
             </div>
@@ -334,7 +334,7 @@ input[type="radio"]:checked::before {
             <div class="input-group">
                 <label for="upassword">Password</label>
                 <div class="input-with-icon">
-                    <input type="password" id="upassword" name="pwd" required placeholder="Enter your password" />
+                    <input type="password" id="upassword" name="pwd" placeholder="Enter your password"  required="required" />
                     <i class="fas fa-lock"></i>
                 </div>
             </div>
@@ -342,7 +342,7 @@ input[type="radio"]:checked::before {
             <div class="input-group">
                 <label for="uphonenumber">Contact</label>
                 <div class="input-with-icon">
-                    <input type="number" id="uphonenumber" name="phoneNumber" required placeholder="Enter your contact number" />
+                    <input type="number" id="uphonenumber" name="phoneNumber" placeholder="Enter your contact number"  required="required" />
                     <i class="fas fa-phone"></i>
                 </div>
             </div>
@@ -350,7 +350,7 @@ input[type="radio"]:checked::before {
             <div class="input-group">
                 <label for="ulocation">Location</label>
                 <div class="input-with-icon">
-                    <input type="text" id="ulocation" name="location" required placeholder="Enter your location" />
+                    <input type="text" id="ulocation" name="location" placeholder="Enter your location"  required="required" />
                     <i class="fas fa-map-marker-alt"></i>
                 </div>
             </div>

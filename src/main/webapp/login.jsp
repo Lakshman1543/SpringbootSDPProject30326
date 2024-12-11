@@ -221,7 +221,7 @@
                   <input type="text" class="form-input" name="name" placeholder="Full Name" required minlength="3" />
                 </div>
                 <div class="form-group">
-                  <select class="form-input" name="gender" required>
+                  <select class="form-input" name="gender" required="required" >
                     <option value="" disabled selected>Select your gender</option>
                     <option value="male">Male</option>
                     <option value="female">Female</option>
@@ -229,16 +229,16 @@
                   </select>
                 </div>
                 <div class="form-group">
-                  <input type="email" class="form-input" name="email" placeholder="Email Address" required />
+                  <input type="email" class="form-input" name="email" placeholder="Email Address" required="required"  />
                 </div>
                 <div class="form-group">
-                  <input type="password" class="form-input" name="pwd" placeholder="Password" required minlength="6" />
+                  <input type="password" class="form-input" name="pwd" placeholder="Password" required="required"  minlength="6" />
                 </div>
                 <div class="form-group">
-                  <input type="tel" class="form-input" name="phoneNumber" placeholder="Contact Number" required pattern="^\d{10}$" />
+                  <input type="tel" class="form-input" name="phoneNumber" placeholder="Contact Number" required="required"  pattern="^\d{10}$" />
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-input" name="location" placeholder="Location" required />
+                  <input type="text" class="form-input" name="location" placeholder="Location" required="required" />
                 </div>
                 <button type="submit" class="btn">Register</button>
               </form>
@@ -263,6 +263,36 @@
         e.preventDefault();
         document.getElementById('cardWrapper').classList.remove('flipped');
       });
+      
+      document.getElementById('switchToRegister').addEventListener('click', function (e) {
+    	    e.preventDefault();
+    	    document.getElementById('cardWrapper').classList.add('flipped');
+    	});
+
+    	document.getElementById('switchToLogin').addEventListener('click', function (e) {
+    	    e.preventDefault();
+    	    document.getElementById('cardWrapper').classList.remove('flipped');
+    	});
+
+    	// Validate registration form before submitting
+    	document.querySelector('form[action="insertuser"]').addEventListener('submit', function (e) {
+    	    if (!validateForm(this)) {
+    	        e.preventDefault();
+    	    }
+    	});
+
+    	function validateForm(form) {
+    	    let isValid = true;
+    	    const inputs = form.querySelectorAll('input, select');
+    	    inputs.forEach((input) => {
+    	        if (!input.checkValidity()) {
+    	            input.reportValidity();
+    	            isValid = false;
+    	        }
+    	    });
+    	    return isValid;
+    	}
+
     </script>
   </body>
 </html>

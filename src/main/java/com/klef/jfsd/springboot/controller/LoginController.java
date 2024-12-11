@@ -59,8 +59,8 @@ public class LoginController {
     			session.setAttribute("user", user);
                 mv.setViewName("userhome");
             } 
-            else if ("pending".equals(user.getAccountstatus())) {
-                mv.addObject("message", "Your account is pending approval.");
+            else if ("Registered".equals(user.getAccountstatus())) {
+                mv.addObject("message", "Your account is pending approval. Please contact the Administrator for assistance");
                 mv.setViewName("login");
             } 
             else if ("rejected".equals(user.getAccountstatus())) {
@@ -68,7 +68,7 @@ public class LoginController {
                 mv.setViewName("login");
             }
             else {
-                mv.addObject("message", "Your account is disabled.");
+                mv.addObject("message", "You may have entered the wrong email address or password or your account might be Disabled.");
                 mv.setViewName("login");
             }
         } 
@@ -78,7 +78,7 @@ public class LoginController {
             mv.setViewName("curatorhome");
         } 
         else {
-            mv.addObject("message", "Login failed, please check your credentials.");
+            mv.addObject("message", "You may have entered the wrong email address or password or your account might be Disabled.");
             mv.setViewName("login");
         }
         return mv;
