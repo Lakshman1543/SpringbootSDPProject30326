@@ -76,7 +76,7 @@
 						<div class="flex flex-col items-center gap-6">
 							<div
 								class="bg-center bg-no-repeat bg-cover rounded-full w-48 h-48"
-								style="background-image: url('https://i.ibb.co/tBHR5F1/curator.jpg');"></div>
+								style="background-image: url('https://ibb.co/Qvnm5w0r');"></div>
 							<a href="https://www.linkedin.com/in/lakshmana-swamy-49a428255/"
 								target="_blank"
 								class="text-lg font-bold text-blue-600 text-center hover:underline">
@@ -128,3 +128,4 @@
 	</div>
 </body>
 </html>
+
